@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service FibonacciComputer {
+    rpc GetNthFibonacciNumber(FibRequest) returns (FibResponse) {}
+}
+
+// nth Fibonacci to be found is given as FibRequest challenge 
+message FibRequest {
+    int64 number = 1;
+}
+
+// nth Fibonacci sent with string type to client as response
+message FibResponse {
+    string number = 1;
+}
